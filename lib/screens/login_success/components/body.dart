@@ -1,7 +1,6 @@
 import 'package:books/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:books/components/default_button.dart';
-import 'package:books/constants.dart';
 import 'package:books/size_config.dart';
 
 class Body extends StatelessWidget {

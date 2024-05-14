@@ -3,7 +3,6 @@ import 'package:books/constants.dart';
 import 'package:books/screens/sign_in/components/sign_in_form.dart';
 import 'package:books/size_config.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
