@@ -1,3 +1,4 @@
+import 'package:books/screens/cart/cart_screen.dart';
 import 'package:books/screens/home/home_screen.dart';
 import 'package:books/screens/login_success/login_success_screen.dart';
 import 'package:books/screens/product_detail/product_detail_screen.dart';
@@ -11,4 +12,5 @@ final Map<String, WidgetBuilder> routes = {
   LoginSuccessScreen.routeName: (context) => LoginSuccessScreen(),
   HomeScreen.routeName: (context) => HomeScreen(),
   ProductDetailScreen.routeName: (context) => ProductDetailScreen(),
+  CartScreen.routeName: (context) => CartScreen(),
 };
