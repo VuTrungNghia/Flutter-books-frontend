@@ -1,3 +1,4 @@
+import 'package:books/call_api/product_api.dart';
 import 'package:books/components/product_card.dart';
 import 'package:books/components/section_title.dart';
 import 'package:books/models/products.dart';
@@ -5,13 +6,33 @@ import 'package:books/screens/product_detail/product_detail_screen.dart';
 import 'package:books/size_config.dart';
 import 'package:flutter/material.dart';
 
-class ProductSection extends StatelessWidget {
-  const ProductSection({
-    super.key,
-  });
+class ListProduct extends StatefulWidget {
+  const ListProduct({super.key});
+
+  @override
+  State<ListProduct> createState() => _ListProductState();
+}
+
+class _ListProductState extends State<ListProduct> {
+   List<Product> list = <Product>[];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    getProducts();
+    super.initState();
+  }
+
+  getProducts(){
+    ProductCallApi.getProducts().then((value){
+        list = value;
+        print(value);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
+
     return Column(
       children: [
         SectionTitle(text: "Products", press: () {}),
@@ -21,13 +42,13 @@ class ProductSection extends StatelessWidget {
           child: Row(
             children: [
               ...List.generate(
-                demoProducts.length,
+                list.length,
                 (index) => ProductCard(
-                  product: demoProducts[index],
+                  product: list[index],
                   press: () => Navigator.pushNamed(
                       context, ProductDetailScreen.routeName,
                       arguments:
-                          ProductDetailArgs(product: demoProducts[index])),
+                          ProductDetailArgs(product: list[index])),
                 ),
               ),
               SizedBox(width: getProportionateScreenWidth(20))

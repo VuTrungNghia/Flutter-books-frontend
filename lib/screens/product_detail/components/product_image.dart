@@ -21,20 +21,20 @@ class _ProductImagesState extends State<ProductImages> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
-          width: getProportionateScreenWidth(238),
-          child: AspectRatio(
-            aspectRatio: 1,
-            child: Image.asset(widget.product.images[selecedImage]),
-          ),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ...List.generate(widget.product.images.length,
-                (index) => BuildPreviewProductImage(index))
-          ],
-        )
+        // SizedBox(
+        //   width: getProportionateScreenWidth(238),
+        //   child: AspectRatio(
+        //     aspectRatio: 1,
+        //     child: Image.asset(widget.product.images[selecedImage]),
+        //   ),
+        // ),
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: [
+        //     ...List.generate(widget.product.images.length,
+        //         (index) => BuildPreviewProductImage(index))
+        //   ],
+        // )
       ],
     );
   }
@@ -57,7 +57,7 @@ class _ProductImagesState extends State<ProductImages> {
           border: Border.all(
               color: selecedImage == index ? primaryColor : Colors.transparent),
         ),
-        child: Image.asset(widget.product.images[index]),
+        // child: Image.asset(widget.product.images[index]),
       ),
     );
   }

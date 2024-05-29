@@ -33,16 +33,16 @@ class ProductCard extends StatelessWidget {
                   color: secondaryColor.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: Image.asset(product.images[0]),
+                // child: Image.asset(product.images[0]),
               ),
             ),
             const SizedBox(height: 5),
-            Text(
-              product.title,
-              textAlign: TextAlign.center,
-              maxLines: 2,
-              style: TextStyle(color: Colors.black),
-            ),
+            // Text(
+              // product.title,
+              // textAlign: TextAlign.center,
+              // maxLines: 2,
+              // style: TextStyle(color: Colors.black),
+            // ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -60,16 +60,16 @@ class ProductCard extends StatelessWidget {
                     padding: EdgeInsets.all(getProportionateScreenWidth(8)),
                     width: getProportionateScreenWidth(28),
                     height: getProportionateScreenWidth(28),
-                    decoration: BoxDecoration(
-                      color: product.isFavourite
-                          ? primaryColor.withOpacity(0.15)
-                          : secondaryColor.withOpacity(0.1),
-                      shape: BoxShape.circle,
-                    ),
-                    child: SvgPicture.asset("assets/icons/Heart Icon_2.svg",
-                        color: product.isFavourite
-                            ? Color(0xFFFF4848)
-                            : Color(0xFFDBDEE4)),
+                    // decoration: BoxDecoration(
+                    //   color: product.isFavourite
+                    //       ? primaryColor.withOpacity(0.15)
+                    //       : secondaryColor.withOpacity(0.1),
+                    //   shape: BoxShape.circle,
+                    // ),
+                    // child: SvgPicture.asset("assets/icons/Heart Icon_2.svg",
+                    //     color: product.isFavourite
+                    //         ? Color(0xFFFF4848)
+                    //         : Color(0xFFDBDEE4)),
                   ),
                 )
               ],

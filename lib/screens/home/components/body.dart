@@ -36,7 +36,7 @@ class Body extends StatelessWidget {
         SizedBox(
           height: getProportionateScreenWidth(20),
         ),
-        ProductSection(),
+        ListProduct(),
          SizedBox(
           height: getProportionateScreenWidth(20),
         ),

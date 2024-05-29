@@ -16,7 +16,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ProductImages(product: product),
+        // ProductImages(product: product),
         TopRoundedContainer(
             color: Colors.white,
             child: Column(

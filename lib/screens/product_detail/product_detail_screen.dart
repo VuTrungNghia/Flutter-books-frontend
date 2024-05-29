@@ -15,10 +15,10 @@ class ProductDetailScreen extends StatelessWidget {
     final ProductDetailArgs args = ModalRoute.of(context)!.settings.arguments as ProductDetailArgs;
     return Scaffold(
       backgroundColor: Color(0xFFF5F6F9),
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(AppBar().preferredSize.height),
-        child: CustomAppBar(rating: args.product.rating,), // Your custom app bar content
-      ),
+      // appBar: PreferredSize(
+      //   preferredSize: Size.fromHeight(AppBar().preferredSize.height),
+      //   child: CustomAppBar(rating: args.product.id,), // Your custom app bar content
+      // ),
       body:SingleChildScrollView(
         child: Body(product: args.product),
       ),
