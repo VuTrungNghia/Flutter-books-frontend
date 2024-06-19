@@ -47,9 +47,9 @@ class _SignFormState extends State<SignForm> {
                         remember = value!;
                       });
                     }),
-                Text("Remember me"),
-                Spacer(),
-                Text(
+                const Text("Remember me"),
+                const Spacer(),
+                const Text(
                   "Forgot Password?",
                   style: TextStyle(decoration: TextDecoration.underline),
                 ),
@@ -89,21 +89,22 @@ class _SignFormState extends State<SignForm> {
           });
           return null;
         }
+        return null;
       },
       onChanged: (value) {
         if (value.isNotEmpty && errors.contains(passNullError)) {
           setState(() {
             errors.remove(passNullError);
           });
-          return null;
+          return;
         } else if (value.length >= 8 && errors.contains(shortPassError)) {
           setState(() {
             errors.remove(shortPassError);
           });
-          return null;
+          return;
         }
       },
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
           labelText: "Password",
           hintText: "Enter your password",
           floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -120,13 +121,13 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             errors.remove(emailNullError);
           });
-          return null;
+          return;
         } else if (emailValidatorRegExp.hasMatch(value) &&
             errors.contains(invalidEmailError)) {
           setState(() {
             errors.remove(invalidEmailError);
           });
-          return null;
+          return;
         }
       },
       validator: (value) {
@@ -142,8 +143,9 @@ class _SignFormState extends State<SignForm> {
           });
           return null;
         }
+        return null;
       },
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
           labelText: "Email",
           hintText: "Enter your email",
           floatingLabelBehavior: FloatingLabelBehavior.always,

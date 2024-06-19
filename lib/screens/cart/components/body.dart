@@ -25,13 +25,13 @@ class _BodyState extends State<Body> {
               key: Key(demoCarts[index].product.id.toString()),
               direction: DismissDirection.endToStart,
               background: Container(
-               padding:  EdgeInsets.symmetric(vertical: 10),
+               padding:  const EdgeInsets.symmetric(vertical: 10),
                 decoration: BoxDecoration(
-                  color: Color(0xFFFFE6E6),
+                  color: const Color(0xFFFFE6E6),
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Row(children: [
-                  Spacer(),
+                  const Spacer(),
                   SvgPicture.asset("assets/icons/Trash.svg"),
                 ]),
               ),

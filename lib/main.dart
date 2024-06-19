@@ -1,4 +1,3 @@
-import 'package:books/constants.dart';
 import 'package:books/routes.dart';
 import 'package:books/screens/splash/splash_screen.dart';
 import 'package:books/theme.dart';
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: theme(),
-      home: SplashScreen(),
+      home: const SplashScreen(),
       routes: routes,
     );
   }

@@ -23,7 +23,7 @@ class ProductDesciption extends StatelessWidget {
               EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
           child: Text(
             product.title,
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
         const SizedBox(
@@ -36,15 +36,15 @@ class ProductDesciption extends StatelessWidget {
             width: getProportionateScreenWidth(64),
             decoration: BoxDecoration(
                 color:
-                    product.isFavourite ? Color(0xFFFFE6E6) : Color(0xFFF5F6F9),
-                borderRadius: BorderRadius.only(
+                    product.isFavourite ? const Color(0xFFFFE6E6) : const Color(0xFFF5F6F9),
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(20),
                   bottomLeft: Radius.circular(20),
                 )),
             child: SvgPicture.asset(
               "assets/icons/Heart Icon_2.svg",
               color:
-                  product.isFavourite ? Color(0xFFFF4848) : Color(0xFFDBDEE4),
+                  product.isFavourite ? const Color(0xFFFF4848) : const Color(0xFFDBDEE4),
             ),
           ),
         ),
@@ -59,7 +59,7 @@ class ProductDesciption extends StatelessWidget {
               horizontal: getProportionateScreenWidth(20), vertical: 10),
           child: GestureDetector(
             onTap: pressOnSeeMore,
-            child: Row(
+            child: const Row(
               children: [
                 Text(
                   "See more",

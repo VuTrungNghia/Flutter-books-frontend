@@ -1,13 +1,11 @@
 import 'package:books/components/default_button.dart';
 import 'package:books/components/rounded_icon_btn.dart';
-import 'package:books/constants.dart';
 import 'package:books/models/products.dart';
 import 'package:books/screens/product_detail/components/product_description.dart';
 import 'package:books/screens/product_detail/components/product_image.dart';
 import 'package:books/screens/product_detail/components/top_rounded_container.dart';
 import 'package:books/size_config.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key, required this.product});
@@ -26,13 +24,13 @@ class Body extends StatelessWidget {
                   pressOnSeeMore: () {},
                 ),
                 TopRoundedContainer(
-                  color: Color(0xFFF6F7F9),
+                  color: const Color(0xFFF6F7F9),
                   child: Padding(
                     padding: EdgeInsets.symmetric(
                         horizontal: getProportionateScreenWidth(20)),
                     child: Row(children: [
-                      Text("Price: " + product.price.toString() + "USD"),
-                      Spacer(),
+                      Text("Price: ${product.price}USD"),
+                      const Spacer(),
                       Row(children: [
                         RoundedIcon(iconData: Icons.remove, press: () {}),
                         SizedBox(

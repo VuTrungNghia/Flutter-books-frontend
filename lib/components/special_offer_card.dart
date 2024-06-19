@@ -34,21 +34,21 @@ class SectionOfferCard extends StatelessWidget {
                             begin: Alignment.topCenter,
                             end: Alignment.bottomCenter,
                             colors: [
-                      Color(0xFF343434).withOpacity(0.4),
-                      Color(0xFF343434).withOpacity(0.15),
+                      const Color(0xFF343434).withOpacity(0.4),
+                      const Color(0xFF343434).withOpacity(0.15),
                     ]))),
                 Padding(
                   padding: EdgeInsets.symmetric(
                       horizontal: getProportionateScreenWidth(15),
                       vertical: getProportionateScreenWidth(10)),
                   child: Text.rich(
-                    TextSpan(style: TextStyle(color: Colors.white), children: [
+                    TextSpan(style: const TextStyle(color: Colors.white), children: [
                       TextSpan(
-                          text: "${category}\n",
+                          text: "$category\n",
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: getProportionateScreenWidth(18))),
-                      TextSpan(text: "${numOfBrands} Brands"),
+                      TextSpan(text: "$numOfBrands Brands"),
                     ]),
                   ),
                 ),

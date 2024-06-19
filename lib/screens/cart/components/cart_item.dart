@@ -18,9 +18,9 @@ class CartItem extends StatelessWidget {
           child: AspectRatio(
             aspectRatio: 0.88,
             child: Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: Color(0xFFF5F6F9),
+                color: const Color(0xFFF5F6F9),
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Image.asset(cart.product.images[0]),
@@ -33,7 +33,7 @@ class CartItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(cart.product.title,
-              style: TextStyle(color: Colors.black, fontSize: 16),
+              style: const TextStyle(color: Colors.black, fontSize: 16),
               maxLines: 2),
           const SizedBox(
             height: 10,
@@ -41,12 +41,12 @@ class CartItem extends StatelessWidget {
           Text.rich(
             TextSpan(
                 text: "\$${cart.product.price}",
-                style: TextStyle(
+                style: const TextStyle(
                     fontWeight: FontWeight.w600, color: primaryColor),
                 children: [
                   TextSpan(
                     text: " x${cart.numOfItems}",
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: textColor,
                       
                     )

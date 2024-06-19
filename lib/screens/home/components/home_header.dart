@@ -16,7 +16,7 @@ class HomeHeader extends StatelessWidget {
           EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
       child:
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-        SearchField(),
+        const SearchField(),
         IconBtnWithCount(
             svg: "assets/icons/Cart Icon.svg",
             numberOfItems: 0,

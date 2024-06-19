@@ -20,14 +20,14 @@ class Body extends StatelessWidget {
             fontWeight: FontWeight.bold,
             color: Colors.black,
           )),
-      Spacer(),
+      const Spacer(),
       SizedBox(
         width: SizeConfig.screenWidth * 0.6,
         child: defaultButton(text: "Back to Home", press: () {
           Navigator.pushNamed(context, HomeScreen.routeName);
         }),
       ),
-      Spacer(),
+      const Spacer(),
     ]);
   }
 }

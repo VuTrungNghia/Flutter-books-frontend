@@ -14,8 +14,8 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context),
-      body: Body(),
-      bottomNavigationBar: CheckOutCart(),
+      body: const Body(),
+      bottomNavigationBar: const CheckOutCart(),
     );
   }
 
@@ -23,13 +23,13 @@ class CartScreen extends StatelessWidget {
     return AppBar(
       title: Column(
         children: [
-          Text(
+          const Text(
             "Your Cart",
             style: TextStyle(color: Colors.black),
           ),
           Text(
             "${demoCarts.length} items",
-            style: Theme.of(context).textTheme.caption,
+            style: Theme.of(context).textTheme.bodySmall,
           ),
         ],
       ),
@@ -51,13 +51,13 @@ class CheckOutCart extends StatelessWidget {
       ),
       decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(30), topRight: Radius.circular(30)),
           boxShadow: [
             BoxShadow(
-                offset: Offset(0, -15),
+                offset: const Offset(0, -15),
                 blurRadius: 20,
-                color: Color(0xFFDADADA).withOpacity(0.15))
+                color: const Color(0xFFDADADA).withOpacity(0.15))
           ]),
       child: SafeArea(
         child: Column(
@@ -66,19 +66,19 @@ class CheckOutCart extends StatelessWidget {
             Row(
               children: [
                 Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   height: getProportionateScreenWidth(40),
                   width: getProportionateScreenWidth(40),
                   decoration: BoxDecoration(
-                    color: Color(0xFFF5F6F9),
+                    color: const Color(0xFFF5F6F9),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: SvgPicture.asset("assets/icons/receipt.svg"),
                 ),
-                Spacer(),
-                Text("Add voucher code"),
+                const Spacer(),
+                const Text("Add voucher code"),
                 const SizedBox(width: 10,),
-                Icon(Icons.arrow_forward_ios,size: 12,color: textColor,)
+                const Icon(Icons.arrow_forward_ios,size: 12,color: textColor,)
               ]
             ),
             SizedBox(
@@ -87,7 +87,7 @@ class CheckOutCart extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text.rich(TextSpan(text: "Total\n", children: [
+                const Text.rich(TextSpan(text: "Total\n", children: [
                   TextSpan(
                     text: "\$337.15", 
                     style: TextStyle(fontSize: 16, color: Colors.black),

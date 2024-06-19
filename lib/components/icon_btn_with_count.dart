@@ -47,7 +47,7 @@ class IconBtnWithCount extends StatelessWidget {
               child: Center(
                   child: Text(
                 "$numberOfItems",
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.white,
                     fontSize: 10,
                     height: 1,

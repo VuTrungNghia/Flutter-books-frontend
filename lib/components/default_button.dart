@@ -18,15 +18,15 @@ class defaultButton extends StatelessWidget {
       height: getProportionateScreenHeight(56),
       child: TextButton(
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(primaryColor),
-            overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                (Set<MaterialState> states) {
-              if (states.contains(MaterialState.hovered)) {
+            backgroundColor: WidgetStateProperty.all<Color>(primaryColor),
+            overlayColor: WidgetStateProperty.resolveWith<Color?>(
+                (Set<WidgetState> states) {
+              if (states.contains(WidgetState.hovered)) {
                 return secondaryColor
                     .withOpacity(0.04); // Opacity for hovered state
               }
-              if (states.contains(MaterialState.focused) ||
-                  states.contains(MaterialState.pressed)) {
+              if (states.contains(WidgetState.focused) ||
+                  states.contains(WidgetState.pressed)) {
                 return secondaryColor.withOpacity(
                     0.25); // Increased opacity for pressed/focused state
               }

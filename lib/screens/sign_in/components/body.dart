@@ -1,6 +1,7 @@
 import 'package:books/components/social_button.dart';
 import 'package:books/constants.dart';
 import 'package:books/screens/sign_in/components/sign_in_form.dart';
+import 'package:books/screens/sign_up/sign_up_screen.dart';
 import 'package:books/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -26,12 +27,12 @@ class Body extends StatelessWidget {
                     color: Colors.black,
                     fontWeight: FontWeight.bold),
               ),
-              Text(
+              const Text(
                 "Sign in with your email and password \nor continue with social media",
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.08),
-              SignForm(),
+              const SignForm(),
               SizedBox(height: SizeConfig.screenHeight * 0.08),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -48,7 +49,9 @@ class Body extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("Don't have an account?", style: TextStyle(fontSize: getProportionateScreenWidth(16))),
-                   Text("Sign Up", style: TextStyle(fontSize: getProportionateScreenWidth(16),color: primaryColor)),
+                   GestureDetector(
+                    onTap: () => Navigator.pushNamed(context, SignUpScreen.routeName),
+                    child: Text("Sign Up", style: TextStyle(fontSize: getProportionateScreenWidth(16),color: primaryColor))),
                 ],
               ),
             ],

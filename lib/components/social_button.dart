@@ -22,7 +22,7 @@ class socialButton extends StatelessWidget {
         height: getProportionateScreenHeight(40),
         width: getProportionateScreenWidth(40),
         decoration:
-            BoxDecoration(color: Color(0xFFF5F6F9), shape: BoxShape.circle),
+            const BoxDecoration(color: Color(0xFFF5F6F9), shape: BoxShape.circle),
         child: SvgPicture.asset(icon),
       ),
     );

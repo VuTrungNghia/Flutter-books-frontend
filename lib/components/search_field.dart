@@ -21,7 +21,7 @@ class SearchField extends StatelessWidget {
             enabledBorder: InputBorder.none,
             focusedBorder: InputBorder.none,
             hintText: "Search for your favorite book",
-            prefixIcon: Icon(Icons.search),
+            prefixIcon: const Icon(Icons.search),
             contentPadding: EdgeInsets.symmetric(
                 horizontal: getProportionateScreenWidth(20),
                 vertical: getProportionateScreenWidth(9))),

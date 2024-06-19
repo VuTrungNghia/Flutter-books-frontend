@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class Body extends StatefulWidget {
+  const Body({super.key});
+
   @override
   _BodyState createState() => _BodyState();
 }
@@ -54,13 +56,13 @@ class _BodyState extends State<Body> {
               padding: EdgeInsets.symmetric(
                   horizontal: getProportionateScreenWidth(20)),
               child: Column(children: <Widget>[
-                Spacer(),
+                const Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(
                       splashData.length, (index) => builDot(index: index)),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 3,
                 ),
                 defaultButton(
@@ -69,7 +71,7 @@ class _BodyState extends State<Body> {
                     Navigator.pushNamed(context, SignInScreen.routeName);
                   },
                 ),
-                Spacer(),
+                const Spacer(),
               ]),
             ),
           )
@@ -81,11 +83,11 @@ class _BodyState extends State<Body> {
   AnimatedContainer builDot({int index = 0}) {
     return AnimatedContainer(
       duration: animationDuration,
-      margin: EdgeInsets.only(right: 5),
+      margin: const EdgeInsets.only(right: 5),
       height: 6,
       width: currentPage == index ? 20 : 6,
       decoration: BoxDecoration(
-          color: currentPage == index ? primaryColor : Color(0xFFD8D8D8),
+          color: currentPage == index ? primaryColor : const Color(0xFFD8D8D8),
           borderRadius: BorderRadius.circular(3)),
     );
   }
